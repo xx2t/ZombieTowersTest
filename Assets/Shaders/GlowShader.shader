@@ -1,4 +1,6 @@
-﻿Shader "Glow/GlowShader"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Glow/GlowShader"
 {
     SubShader
     {
@@ -18,7 +20,7 @@
             VertexToFragment VShader(VertexToFragment i)
             {
                 VertexToFragment o;
-                o.pos=mul(UNITY_Matrix_MVP,i.pos);
+                o.pos=UnityObjectToClipPos(i.pos);
                 return o;
             }
             //return white
@@ -28,4 +30,5 @@
             }
             ENDCG
         }
+    }
 }

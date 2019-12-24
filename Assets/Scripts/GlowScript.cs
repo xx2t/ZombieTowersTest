@@ -8,6 +8,7 @@ public class GlowScript : MonoBehaviour
     public Shader Post_Outline;
     public Shader glowShader;
     Camera tempCam;
+    //public RenderTexture TempRT
     Material Post_Mat;
     void Start()
     {
