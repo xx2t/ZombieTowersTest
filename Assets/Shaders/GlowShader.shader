@@ -14,7 +14,7 @@ Shader "Glow/GlowShader"
             #pragma fragment FShader
             struct VertexToFragment
             {
-                float4 pos:SV_POSITION;
+                float4 pos:POSITION;
             };
             //correct position
             VertexToFragment VShader(VertexToFragment i)
